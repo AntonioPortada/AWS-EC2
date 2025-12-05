@@ -36,3 +36,8 @@ apt install git openjdk-21-jdk -y
 - Ya que solo será prueba, subiré un proyecto ejecutando el jar sin instalar tomcat para ahorrar tiempo.
 
 Y servidor listo para trabajar.
+
+
+# Extra/Tips
+
+- Ya que son prácticas y ejercicios, para evitar cargos por las instancias, crea una IMA (AMI en inglés), para tener una copia muy muy barata del software y configuraciones realizadas al servidor, después creas una instancia nueva con la IMA y a seguir jugando y practicando.
