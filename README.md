@@ -38,6 +38,17 @@ apt install git openjdk-21-jdk -y
 Y servidor listo para trabajar.
 
 
+### 3.- Desplegar Back
+- Crear un proyecto java desde la [url](https://start.spring.io) dependiendo a la versión que instalaste.
+
+- Agrega ese proyecto al repositorio y clonalo en el servidor.
+
+- Ejecutalo para validar que si funciona y realiza peticiones.
+
+```bash
+java -jar nombre.jar
+```
+
 # Extra/Tips
 
 - Ya que son prácticas y ejercicios, para evitar cargos por las instancias, crea una IMA (AMI en inglés), para tener una copia muy muy barata del software y configuraciones realizadas al servidor, después creas una instancia nueva con la IMA y a seguir jugando y practicando.
