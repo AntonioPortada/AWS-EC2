@@ -49,6 +49,20 @@ Y servidor listo para trabajar.
 java -jar nombre.jar
 ```
 
+### 4.- Agregar un balanceador de carga
+- Antes de crear el balanceador es necesario crear un "Target Groups", dónde se agregan las instancias (en el caso de EC2) que se quieren balancear. Agregando los puertos necesarios a los servicios.
+
+- Una vez creado el grupo, se crea el balanceador, asignando puertos de entrada a él para repartir el flujo, con las configuraciones de puertos realizadas en el grupo, solo se asigna ese grupo y listo.
+
+
 # Extra/Tips
 
 - Ya que son prácticas y ejercicios, para evitar cargos por las instancias, crea una IMA (AMI en inglés), para tener una copia muy muy barata del software y configuraciones realizadas al servidor, después creas una instancia nueva con la IMA y a seguir jugando y practicando.
+
+- También se pueden crear snapshots para tener un respaldo y recurrir a ellos para rollback.
+
+- Parece los mismo una IMA que un Snapshot, qué tienen de diferente?
+    - La IMA es una copia de la instancia completa, lista para ser usada en una nueva instancia.
+    - Mientras que un Snapshot es un back del disco, quieres restaurar archivos, usa el snapshot de ayer u hoy en la mañana.
+    - IMA sería o es más usado para respaldar cambios grandes en el servidor, actualización de kernel, nuevos programas, configuraciones. Y un Snapshot para respaldar la información de ciertas carpetas importantes, archivos, etc...
+    - Otra cosa importante, los snapshot necesitan una instancia (servidor) existente, mientras que IMA puede crear una instancia.
